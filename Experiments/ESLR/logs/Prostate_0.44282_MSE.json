@@ -1,0 +1,319 @@
+{
+    "beta": [
+        [
+            -0.02956712013122058
+        ],
+        [
+            -0.4350018544670634
+        ],
+        [
+            0.4666376146989383
+        ],
+        [
+            0.284795133795545
+        ],
+        [
+            -0.0459148689703318
+        ],
+        [
+            0.22732161821017519
+        ],
+        [
+            0.19878154365882933
+        ],
+        [
+            -0.2130014486017298
+        ],
+        [
+            0.007128600071869611
+        ],
+        [
+            0.11102322874103296
+        ],
+        [
+            -0.009361444618359721
+        ]
+    ],
+    "embedding_dim": 2,
+    "embedding_matrix": [
+        [
+            -0.7107259005198898,
+            -0.4657265982910924,
+            -0.684086854754244,
+            -0.4930592916273081,
+            -0.6736599751923327,
+            -0.8208612463232478,
+            -0.984626358340223,
+            -0.8003530194558367
+        ],
+        [
+            -0.5904040801542271,
+            0.5203533082853542,
+            0.48619884720981726,
+            0.653978851393219,
+            -0.7030938369585595,
+            -0.7055650212140486,
+            -0.23773123620651426,
+            -0.6589334782903604
+        ]
+    ],
+    "predictor_scaling_parmas": {
+        "mean": [
+            1.3134915526567166,
+            3.626107686567164,
+            64.74626865671642,
+            0.07143990820895525,
+            0.22388059701492538,
+            -0.21420300955223878,
+            6.731343283582089,
+            26.26865671641791
+        ],
+        "var": [
+            1.3134915526567166,
+            3.626107686567164,
+            64.74626865671642,
+            0.07143990820895525,
+            0.22388059701492538,
+            -0.21420300955223878,
+            6.731343283582089,
+            26.26865671641791
+        ]
+    },
+    "target_scaling_parmas": {
+        "mean": [
+            2.4523450850746267
+        ],
+        "var": [
+            2.4523450850746267
+        ]
+    },
+    "test_error": [
+        0.45769193215509124,
+        0.4436425989624073,
+        0.44363872426793527,
+        0.4285291342779261,
+        0.44251888161935476,
+        0.4416388632789749,
+        0.43361452709522325,
+        0.4393398092676069,
+        0.44790776056661424,
+        0.4496471293720549
+    ],
+    "test_hyper_params": [
+        [
+            {
+                "A_end_col": 8,
+                "A_end_row": 30,
+                "A_start_col": 0,
+                "A_start_row": 0,
+                "X_end_col": 2,
+                "X_end_row": 30,
+                "X_start_col": 0,
+                "X_start_row": 0,
+                "Y_end_col": 8,
+                "Y_end_row": 2,
+                "Y_start_col": 0,
+                "Y_start_row": 0,
+                "alpha": 5,
+                "loss": "MSE",
+                "weight": 1
+            }
+        ],
+        [
+            {
+                "Description": "Regularize Embeddings in X",
+                "X_end_col": 2,
+                "X_end_row": 30,
+                "X_start_col": 0,
+                "X_start_row": 0,
+                "alpha": 0.001,
+                "penalty_type": "L2"
+            },
+            {
+                "Description": "Regularize Embeddings in X",
+                "X_end_col": 2,
+                "X_end_row": 30,
+                "X_start_col": 0,
+                "X_start_row": 0,
+                "alpha": 0.0001,
+                "penalty_type": "L1"
+            }
+        ],
+        []
+    ],
+    "test_scaling_parmas": {
+        "mean": [
+            2.4523450850746267
+        ],
+        "var": [
+            2.4523450850746267
+        ]
+    },
+    "train_error": 0.3223202849028466,
+    "train_hyper_params": [
+        [
+            {
+                "A_end_col": 1,
+                "A_end_row": 67,
+                "A_start_col": 0,
+                "A_start_row": 0,
+                "Description": "Supervised Learning Matrix Location",
+                "X_end_col": 12,
+                "X_end_row": 67,
+                "X_start_col": 1,
+                "X_start_row": 0,
+                "Y_end_col": 1,
+                "Y_end_row": 12,
+                "Y_start_col": 0,
+                "Y_start_row": 1,
+                "alpha": 5,
+                "loss": "MSE",
+                "weight": 0.7
+            },
+            {
+                "A_end_col": 9,
+                "A_end_row": 67,
+                "A_start_col": 1,
+                "A_start_row": 0,
+                "Description": "Matrix Factorization Matrix Location",
+                "X_end_col": 3,
+                "X_end_row": 67,
+                "X_start_col": 1,
+                "X_start_row": 0,
+                "Y_end_col": 9,
+                "Y_end_row": 3,
+                "Y_start_col": 1,
+                "Y_start_row": 1,
+                "alpha": 5,
+                "loss": "MSE",
+                "weight": 0.3
+            }
+        ],
+        [
+            {
+                "Description": "Regularize first column of X (constant 0)",
+                "X_end_col": 1,
+                "X_end_row": 67,
+                "X_start_col": 0,
+                "X_start_row": 0,
+                "alpha": 99999999999.9,
+                "penalty_type": "inf"
+            },
+            {
+                "Description": "Regularize constant matrix A",
+                "X_end_col": 12,
+                "X_end_row": 67,
+                "X_start_col": 3,
+                "X_start_row": 0,
+                "alpha": 0,
+                "constant": 1,
+                "penalty_type": "constant"
+            },
+            {
+                "Description": "Regularize Embeddings in X",
+                "X_end_col": 3,
+                "X_end_row": 67,
+                "X_start_col": 1,
+                "X_start_row": 0,
+                "alpha": 0.001,
+                "penalty_type": "L2"
+            },
+            {
+                "Description": "Regularize Embeddings in X",
+                "X_end_col": 3,
+                "X_end_row": 67,
+                "X_start_col": 1,
+                "X_start_row": 0,
+                "alpha": 0.0001,
+                "penalty_type": "L1"
+            }
+        ],
+        [
+            {
+                "Description": "Regularize parameter estimate for Beta for embeddings in Y",
+                "X_end_col": 1,
+                "X_end_row": 3,
+                "X_start_col": 0,
+                "X_start_row": 1,
+                "alpha": 0.001,
+                "penalty_type": "L2"
+            },
+            {
+                "Description": "Regularize parameter estimate for Beta for embeddings in Y",
+                "X_end_col": 1,
+                "X_end_row": 3,
+                "X_start_col": 0,
+                "X_start_row": 1,
+                "alpha": 0.0001,
+                "penalty_type": "L1"
+            },
+            {
+                "Description": "Regularize parameter estimate for Beta for A in Y",
+                "X_end_col": 1,
+                "X_end_row": 11,
+                "X_start_col": 0,
+                "X_start_row": 3,
+                "alpha": 0.001,
+                "penalty_type": "L2"
+            },
+            {
+                "Description": "Regularize parameter estimate for Beta for A  in Y",
+                "X_end_col": 1,
+                "X_end_row": 11,
+                "X_start_col": 0,
+                "X_start_row": 3,
+                "alpha": 0.0001,
+                "penalty_type": "L1"
+            },
+            {
+                "Description": "Regularize Embedding Matrix in Y",
+                "X_end_col": 9,
+                "X_end_row": 3,
+                "X_start_col": 1,
+                "X_start_row": 1,
+                "alpha": 0.001,
+                "penalty_type": "L2"
+            },
+            {
+                "Description": "Regularize first 0 row in Y",
+                "X_end_col": 9,
+                "X_end_row": 1,
+                "X_start_col": 0,
+                "X_start_row": 0,
+                "alpha": 999999999.9,
+                "penalty_type": "inf"
+            },
+            {
+                "Description": "Regularize constant 0 matrix in Y",
+                "X_end_col": 9,
+                "X_end_row": 12,
+                "X_start_col": 1,
+                "X_start_row": 3,
+                "alpha": 999999999.9,
+                "penalty_type": "inf"
+            }
+        ]
+    ],
+    "train_scaling_parmas": {
+        "mean": [
+            1.3134915526567166,
+            3.626107686567164,
+            64.74626865671642,
+            0.07143990820895525,
+            0.22388059701492538,
+            -0.21420300955223878,
+            6.731343283582089,
+            26.26865671641791
+        ],
+        "var": [
+            1.3134915526567166,
+            3.626107686567164,
+            64.74626865671642,
+            0.07143990820895525,
+            0.22388059701492538,
+            -0.21420300955223878,
+            6.731343283582089,
+            26.26865671641791
+        ]
+    }
+}
